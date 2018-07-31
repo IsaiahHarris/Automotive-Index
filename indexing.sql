@@ -28,3 +28,13 @@ WHERE make_code = 'LAM';
 
 SELECT DISTINCT ON (model_title) model_title FROM car_models
 WHERE make_code = 'NISSAN' AND model_code = 'GT-R';
+
+\timing 
+
+SELECT make_code, model_code, model_title, year FROM car_models
+WHERE make_code = 'LAM';
+
+\timing 
+
+SELECT * FROM car_models 
+WHERE year BETWEEN 2010 AND 2015;
