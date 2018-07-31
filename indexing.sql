@@ -43,26 +43,26 @@ SELECT * FROM car_models
 WHERE year = 2010;
 --time 29ms
 
-CREATE INDEX idx_car_models 
-ON car_models (make_code);
+-- CREATE INDEX idx_car_models 
+-- ON car_models (make_code);
 
-SELECT DISTINCT ON (make_title) make_title FROM car_models
-WHERE make_code = 'LAM';
---time 1ms
+-- SELECT DISTINCT ON (make_title) make_title FROM car_models
+-- WHERE make_code = 'LAM';
+-- --time 1ms
 
-SELECT DISTINCT ON (model_title) model_title FROM car_models
-WHERE make_code = 'NISSAN' AND model_code = 'GT-R';
---time 1 ms
+-- SELECT DISTINCT ON (model_title) model_title FROM car_models
+-- WHERE make_code = 'NISSAN' AND model_code = 'GT-R';
+-- --time 1 ms
 
-SELECT make_code, model_code, model_title, year FROM car_models
-WHERE make_code = 'LAM';
---1ms
+-- SELECT make_code, model_code, model_title, year FROM car_models
+-- WHERE make_code = 'LAM';
+-- --1ms
 
-SELECT * FROM car_models
-WHERE year BETWEEN 2010 AND 2015;
---60ms
+-- SELECT * FROM car_models
+-- WHERE year BETWEEN 2010 AND 2015;
+-- --60ms
 
-SELECT * FROM car_models 
-WHERE year = 2010;
---27ms
+-- SELECT * FROM car_models 
+-- WHERE year = 2010;
+-- --27ms
 
